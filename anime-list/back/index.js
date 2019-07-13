@@ -4,6 +4,7 @@ const { Client } = require('es6');
 const client = new Client({ node: 'http://localhost:9200' });
 
 const get_all = require('./queries/get_all');
+const get_by_id = require('./queries/get_by_id');
 const search_by_word = require('./queries/search_by_word');
 const search_by_trending = require('./queries/search_by_trending');
 const search_by_popularity = require('./queries/search_by_popularity');
@@ -13,6 +14,7 @@ const app = express();
 app.use(cors('*'));
 
 get_all(app, client);
+get_by_id(app, client);
 search_by_word(app, client);
 search_by_trending(app, client);
 search_by_popularity(app, client);

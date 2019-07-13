@@ -1,5 +1,5 @@
 const get_all = (app, client) => {
-    return app.get('/search', (req, res) => {
+    return app.get('/animes', (req, res) => {
         const page = req.query.page ? req.query.page : 1;
         const from = (page -1) * 30;
         const size = 20;
