@@ -1,0 +1,85 @@
+{
+	"info": {
+		"_postman_id": "635c82fd-bcc9-4d54-9ab6-c205d73a130e",
+		"name": "ELK",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all animes ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get animes by word",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get animes by likes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get animes by trending",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get animes by popularity",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3005/trending?status=finished&agerated=PG&page=2",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"trending"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "finished"
+						},
+						{
+							"key": "agerated",
+							"value": "PG"
+						},
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
