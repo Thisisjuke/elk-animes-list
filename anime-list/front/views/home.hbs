@@ -1,3 +1,85 @@
-{{#each animes}}
-    {{this}}
-{{/each}}
+<style>
+    .search-input-box {
+        border: 1px solid #ffffff;
+        border-radius: 25px;
+        display: inline-block;
+        height: 42px;
+        line-height: 40px;
+        position: relative;
+    }
+
+    .search-input-box select {
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        -ms-appearance: none;
+        -o-appearance: none;
+        appearance: none;
+        background: transparent url("../img/down.png") no-repeat scroll 86% 10px / 7px auto;
+        border-color: transparent #ffffff transparent transparent;
+        border-style: solid;
+        border-width: 1px;
+        color: #ffffff;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 14px;
+        height: 24px;
+        letter-spacing: 0;
+        line-height: 24px;
+        padding: 0 17px 0 14px;
+    }
+
+    .search-input-box select option {
+        background: #0c0b21 none repeat scroll 0 0;
+        color: #ffffff;
+    }
+
+    .search-input-box input[type="text"] {
+        background: transparent none repeat scroll 0 0;
+        border: 0 none;
+        color: #ffffff;
+        min-width: 502px;
+    }
+
+    .search-input-box button {
+        background: transparent none repeat scroll 0 0;
+        border-color: transparent transparent transparent #ffffff;
+        border-style: solid;
+        border-width: 1px;
+        color: #ffffff;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 14px;
+        height: 24px;
+        line-height: 24px;
+        outline: medium none;
+        padding: 0 15px;
+    }
+</style>
+
+<div class="slider-area slider-carousel owl-carousel">
+    <div class="slider-box">
+        <div class="img">
+            <img src="/img/wallpaper.jpg" alt="">
+        </div>
+        <div class="content">
+            <div class="sb-content-box">
+                <h3 class="intro animated">Welcome to</h3>
+                <h2 class="title animated">our anime Town</h2>
+                <p class="text animated d-none d-md-block">Search for your favorites animes. Find ideas!</p>
+                <div class="buttons">
+                    {{> search-bar }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="top-movie-area">
+    <div class="container">
+        <div class="top-movie-carousel owl-carousel">
+            {{#each animes as |anime|}}
+                {{> anime-cover anime}}
+            {{/each}}
+        </div>
+    </div>
+</div>

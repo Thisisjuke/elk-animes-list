@@ -1,0 +1,85 @@
+{{> search-nav}}
+<div class="other-page-breadcumb-area bg-with-ebony">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-md-9 col-sm-9 col-12">
+                <div class="op-breadcumb">
+                    <ul>
+                        <li>
+                            <a href="/">
+                                <span>
+                                    <i class="fa fa-home" aria-hidden="true"></i>
+                                </span>
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/animes">Animes</a>
+                        </li>
+                        <li>
+                            <a>{{anime._source.canonicalTitle}}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="details-banner-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 col-sm-12 col-12">
+                <div class="dba-left-single umf-single single-top-movie">
+                    <div class="img">
+                        <a>
+                            <img src="{{anime._source.coverImage.large}}" alt="">
+                        </a>
+                    </div>
+                    <span class="view-counter">759k Views</span>
+                    <a class="popup-youtube popup-yt" href="https://www.youtube.com/watch?v={{anime._source.youtubeVideoId}}">
+                        <svg fill="#fff" viewBox="-22 -20 80 80">
+                            <g>
+                                <path d="M36.068,20.176l-29-20C6.761-0.035,6.363-0.057,6.035,0.114C5.706,0.287,5.5,0.627,5.5,0.999v40  c0,0.372,0.206,0.713,0.535,0.886c0.146,0.076,0.306,0.114,0.465,0.114c0.199,0,0.397-0.06,0.568-0.177l29-20  c0.271-0.187,0.432-0.494,0.432-0.823S36.338,20.363,36.068,20.176z M7.5,39.095V2.904l26.239,18.096L7.5,39.095z"/>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="details-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="details">
+                    <div class="details-movie">
+                        <div class="img">
+                            <img src="{{anime._source.posterImage.large}}" alt="">
+                        </div>
+                        <div class="content">
+                            <h2 class="name">{{anime._source.canonicalTitle}}</h2>
+                            <div class="reviews rating" style="color:#ff9700;">
+                                {{{displayStars anime._source.averageRating}}}
+                            </div>
+                            <ul class="info">
+                                <li>Original Title : {{anime._source.titles.ja_jp}}</li>
+                                <li>Episodes : {{anime._source.episodeLength}}</li>
+                                <li>Status : {{anime._source.status}}</li>
+                                <li>Release Date : {{{formatDate anime._source.startDate}}}</li>
+                                <li>Show Type : {{anime._source.showType}}</li>
+                                <li>Age Rating : {{anime._source.ageRating}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="details-content">
+                        <h2 class="title">Synopsis :</h2>
+                        <p class="text pt-2">{{anime._source.synopsis}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

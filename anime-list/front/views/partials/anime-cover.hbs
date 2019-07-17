@@ -1,0 +1,33 @@
+<div class="single-top-movie">
+    <div class="img">
+        <a>
+            <img src="{{this._source.posterImage.large}}" alt="">
+        </a>
+    </div>
+    <span class="view-counter">
+        {{this._source.favoritesCount}}
+    </span>
+    <a class="popup-youtube" href="/animes/{{this._id}}">
+        <svg fill="#fff" viewBox="-22 -20 80 80">
+            <g>
+                <path d="M36.068,20.176l-29-20C6.761-0.035,6.363-0.057,6.035,0.114C5.706,0.287,5.5,0.627,5.5,0.999v40  c0,0.372,0.206,0.713,0.535,0.886c0.146,0.076,0.306,0.114,0.465,0.114c0.199,0,0.397-0.06,0.568-0.177l29-20  c0.271-0.187,0.432-0.494,0.432-0.823S36.338,20.363,36.068,20.176z M7.5,39.095V2.904l26.239,18.096L7.5,39.095z"/>
+            </g>
+        </svg>
+    </a>
+    <div class="content">
+        <h2 class="name">
+            <a href="#">{{this._source.canonicalTitle}}</a>
+        </h2>
+        <div class="rating clearfix" style="color:#ff9700;">
+            {{{displayStars this._source.averageRating}}}
+        </div>
+        <p class="date">{{{formatDate this._source.startDate}}}</p>
+        <p class="duration">
+            {{#if this._source.episodeCount}}
+                Episode count : {{this._source.episodeCount}}
+            {{else}}
+                On Going
+            {{/if}}
+        </p>
+    </div>
+</div>

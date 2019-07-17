@@ -1,13 +1,15 @@
 const axios = require('./client');
 
-const getAllAnimes = async (page = 1) => {
-    const resp = await axios.get(`/animes?page=${page}`)
+const queryAnimes = async (url, res) => {
+    const resp = await axios.get(url)
         .then(response => {
             return response.data;
+        }).catch(() => {
+            return res.redirect(301, "/not_found");
         });
     return resp;
 };
 
 module.exports = {
-    getAllAnimes,
+    queryAnimes,
 };

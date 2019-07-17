@@ -1,0 +1,27 @@
+{{> search-nav}}
+<div class="feature-movie-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                {{> filter}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="grid" role="tabpanel">
+                        <div class="grid-movies">
+                            <div class="row">
+                                {{#each animes as |anime|}}
+                                    <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                                        {{> anime-cover anime}}
+                                    </div>
+                                {{/each}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

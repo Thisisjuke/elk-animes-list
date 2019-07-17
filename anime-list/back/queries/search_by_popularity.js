@@ -2,7 +2,8 @@ const search_by_popularity = (app, client) => {
     return app.get('/popularity', (req, res) => {
         const page = req.query.page ? req.query.page : 1;
         const from = (page -1) * 30;
-        const size = 20;
+        let size = 20;
+        req.query.max ? size=4 : null;
         client
             .search({
                 index: 'animes',
@@ -18,7 +19,9 @@ const search_by_popularity = (app, client) => {
             .then(({ body }) => {
                 res.status(200).send(body.hits.hits);
             })
-            .catch(console.error);
+            .catch(() => {
+                return res.status(500)
+            });
     });
 };
 

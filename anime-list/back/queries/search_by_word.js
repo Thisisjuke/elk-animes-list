@@ -29,7 +29,9 @@ const search_by_word = (app, client) => {
             .then(({body}) => {
                 res.status(200).send(body.hits.hits);
             })
-            .catch(console.error);
+            .catch(() => {
+                return res.status(500)
+            });
     });
 };
 
